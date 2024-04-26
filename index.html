@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<!-- 
+Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4
+-->
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,4 +20,48 @@
         </div>
     </div>
 </body>
-</html>
+<style>
+    #conteudo {
+        background: #992999;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("ótima escolha! :)");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://youtu.be/rTsbSY04s1Y?si=-wIvV7DeoZi2uIZe";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+    </html>
